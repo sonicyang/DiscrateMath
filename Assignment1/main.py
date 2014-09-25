@@ -1,4 +1,5 @@
-import sys
+n = 25
+k = 10
 
 def iteration(n, k):
     return iterationFactorical(n) / (iterationFactorical(k) * iterationFactorical(n - k))
@@ -25,9 +26,16 @@ def seperate(n, k):
     return seperate(n - 1,  k - 1) + seperate(n - 1, k)
 
 def main():
-    print(iteration(10, 3))    
-    print(recursive(10, 3))    
-    print(seperate(10, 3))    
+    pass
 
-main()
+def testIteration():
+    print(iteration(n, k))
 
+def testRecursive():
+    print(recursive(n, k))
+
+def testSeprate():
+    print(seperate(n, k))
+
+if __name__ == "__main__":
+    main()
